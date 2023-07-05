@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_faq/flutter_faq.dart';
 import 'package:uitest/screens/home_screen/sections/footer.dart';
 import 'package:uitest/screens/home_screen/sections/header.dart';
 import 'package:uitest/screens/home_screen/sections/latest_blogs.dart';
@@ -6,7 +7,6 @@ import 'package:uitest/screens/home_screen/sections/links.dart';
 import 'package:uitest/screens/home_screen/sections/why_choose_us.dart';
 
 import '../../constants/home_page_images.dart';
-import '../../widgets/faq.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -183,7 +183,13 @@ class HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-            const FAQList(),
+            // const FAQList(),
+            const FAQ(
+              question: "Who built the UI?",
+              answer: "kanyanta",
+              expandedIcon: Icon(Icons.minimize),
+              collapsedIcon: Icon(Icons.add),
+            ),
             const Links(),
             const Divider(),
             const Footer(),
